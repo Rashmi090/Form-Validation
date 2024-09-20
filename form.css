@@ -1,0 +1,102 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Helvetica Neue, sans-serif;
+}
+body {
+    background: linear-gradient(to bottom, #ADD8E6, #FFB6C1);
+    min-height: 100vh; /* Minimum height to cover full viewport */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.form-wrapper {
+    max-width: 600px; /* Maximum width */
+    width: 100%; /* Allow form to take full width within max-width */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for layering effect */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin: 20px; /* Add margin for spacing on smaller screens */
+}
+
+/* Title and other form styles remain the same... */
+.form-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Ensure other styles are as before */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.invalid-feedback {
+    display: none;
+    color: red;
+}
+
+input.is-invalid, 
+select.is-invalid {
+    border-color: red;
+}
+
+/* Button */
+button[type="submit"], 
+button[type="reset"] {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+    color: white;
+}
+
+button[type="reset"]:hover {
+    background-color: #c82333;
+}
+
+/* Responsive  */
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 15px;
+        margin-top: 30px;
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+
+    button[type="submit"], 
+    button[type="reset"] {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
